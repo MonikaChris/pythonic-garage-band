@@ -3,6 +3,11 @@ class Band:
         self.name = name
         self.members = members
 
+    def play_solos(self):
+        solos = []
+        for member in self.members:
+            solos.append(member.play_solo())
+        return solos
 
 class Musician:
     pass
