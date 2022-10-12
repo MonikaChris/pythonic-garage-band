@@ -22,6 +22,9 @@ class Guitarist(Musician):
     def get_instrument():
         return 'guitar'
 
+    @staticmethod
+    def play_solo():
+        return 'face melting guitar solo'
 
 class Bassist(Musician):
     def __init__(self, name):
@@ -37,6 +40,10 @@ class Bassist(Musician):
     def get_instrument():
         return 'bass'
 
+    @staticmethod
+    def play_solo():
+        return 'bom bom buh bom'
+
 
 class Drummer(Musician):
     def __init__(self, name):
@@ -51,3 +58,7 @@ class Drummer(Musician):
     @staticmethod
     def get_instrument():
         return 'drums'
+
+    @staticmethod
+    def play_solo():
+        return 'rattle boom crash'
