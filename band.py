@@ -18,6 +18,10 @@ class Guitarist(Musician):
     def __repr__(self):
         return f'Guitarist instance. Name = {self.name}'
 
+    @staticmethod
+    def get_instrument():
+        return 'guitar'
+
 
 class Bassist(Musician):
     def __init__(self, name):
@@ -29,6 +33,10 @@ class Bassist(Musician):
     def __repr__(self):
         return f'Bassist instance. Name = Meshell Ndegeocello'
 
+    @staticmethod
+    def get_instrument():
+        return 'bass'
+
 
 class Drummer(Musician):
     def __init__(self, name):
@@ -39,3 +47,7 @@ class Drummer(Musician):
 
     def __repr__(self):
         return f'Drummer instance. Name = {self.name}'
+
+    @staticmethod
+    def get_instrument():
+        return 'drums'
