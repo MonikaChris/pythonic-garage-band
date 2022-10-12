@@ -1,6 +1,6 @@
 import pytest
 
-from pythonic_garage_band.band import (
+from band import (
     Band,
     Musician,
     Guitarist,
@@ -9,7 +9,7 @@ from pythonic_garage_band.band import (
 )
 
 
-@pytest.mark.skip("todo")
+#@pytest.mark.skip("todo")
 def test_guitarist_str():
     joan = Guitarist("Joan Jett")
     actual = str(joan)
