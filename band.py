@@ -6,6 +6,12 @@ class Band:
         self.members = members
         Band.instances.append(self)
 
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return f'Band("{self.name}"'
+
     def play_solos(self):
         solos = []
         for member in self.members:
