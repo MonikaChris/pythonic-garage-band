@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Band:
     instances = []
 
@@ -23,12 +25,16 @@ class Band:
         return Band.instances
 
 
-class Musician:
+class Musician(ABC):
+
     def __init__(self, name):
         self.name = name
 
 
 class Guitarist(Musician):
+
+    def __init__(self, name):
+        super().__init__(name)
 
     def __str__(self):
         return f'My name is {self.name} and I play guitar'
@@ -47,6 +53,9 @@ class Guitarist(Musician):
 
 class Bassist(Musician):
 
+    def __init__(self, name):
+        super().__init__(name)
+
     def __str__(self):
         return f'My name is {self.name} and I play bass'
 
@@ -64,6 +73,9 @@ class Bassist(Musician):
 
 class Drummer(Musician):
 
+    def __init__(self, name):
+        super().__init__(name)
+
     def __str__(self):
         return f'My name is {self.name} and I play drums'
 
@@ -77,3 +89,9 @@ class Drummer(Musician):
     @staticmethod
     def play_solo():
         return 'rattle boom crash'
+
+
+class Keyboardist(Musician):
+    def __init__(self, name):
+        super().__init__(name)
+
